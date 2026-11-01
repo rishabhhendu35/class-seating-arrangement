@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClassroomOS — Seating Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon">C<span>+</span></div><div><b>ClassroomOS</b><small>SEATING STUDIO</small></div></div>
+    <div class="nav-caption">WORKSPACE</div>
+    <div class="nav active"><span>▦</span> Seating planner <b>01</b></div>
+    <div class="nav"><span>▤</span> Classroom overview</div>
+    <div class="nav"><span>♙</span> Student allocation</div>
+    <div class="side-bottom"><div class="tip-card"><span>✦</span><b>Make room to learn.</b><p>Plan a balanced classroom with a clear visual seating map.</p></div><small>BUILT WITH C LANGUAGE</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><div>Workspace <span>/</span> <b>Seating planner</b></div><div class="server-state"><i></i> LOCAL C SERVER</div></header>
+    <section class="hero">
+      <div><div class="eyebrow">CLASSROOM MANAGEMENT TOOL</div><h1>Seating <em>Studio.</em></h1><p>Configure your classroom, organise your students, and generate a visual seating plan.</p></div>
+      <div class="hero-art"><div class="art-board">✳<b>PLAN</b><small>WITH PURPOSE</small></div><div class="art-back"></div></div>
+    </section>
+
+    <section class="stats">
+      <div><span class="stat-icon blue">▦</span><small>CORE LOGIC</small><b>C Language</b></div>
+      <div><span class="stat-icon purple">⌘</span><small>INTERFACE</small><b>HTML + CSS</b></div>
+      <div><span class="stat-icon green">✦</span><small>ALLOCATION</small><b>Automatic</b></div>
+      <div><span class="stat-icon gold">◷</span><small>PROCESSING</small><b>Local server</b></div>
+    </section>
+
+    <section class="workspace">
+      <form id="planner" class="settings">
+        <div class="card-title"><div><small>01 / CONFIGURATION</small><h2>Room details</h2><p>Enter your classroom information.</p></div><span class="title-icon">⌗</span></div>
+        <label for="rows">Number of rows</label><div class="input"><span>▤</span><input id="rows" name="rows" type="number" min="1" max="30" value="5" required><small>ROWS</small></div>
+        <label for="students">Total students</label><div class="input"><span>♙</span><input id="students" name="students" type="number" min="1" max="500" value="40" required><small>STUDENTS</small></div>
+        <div class="two-col"><div><label for="batches">Number of batches</label><div class="input"><span>▦</span><input id="batches" name="batches" type="number" min="3" max="20" value="4" required></div></div><div><label for="teachers">Number of teachers</label><div class="input"><span>♟</span><input id="teachers" name="teachers" type="number" min="0" max="30" value="2" required></div></div></div>
+        <label for="teacherCols">Teacher desk columns</label><div class="input"><span>▥</span><input id="teacherCols" name="teacherCols" type="number" min="1" max="10" value="2" required><small>COLUMNS</small></div>
+        <div class="note"><span>ⓘ</span> Each bench seats 3 students from 3 different batches. Benches are arranged side by side in each row.</div>
+        <button type="submit">✦ &nbsp; Generate seating plan <b>↗</b></button>
+        <p id="status">Ready. Enter details to generate your layout.</p>
+      </form>
+
+      <section class="preview">
+        <div class="card-title preview-title"><div><small>02 / LIVE CANVAS</small><h2>Classroom preview</h2><p>Your generated floor plan appears here.</p></div><span class="live"><i></i> BROWSER VIEW</span></div>
+        <div class="browser-bar"><span>● ● ●</span><small>CLASSROOM / FLOOR PLAN</small><b>•••</b></div>
+        <div id="output">
+          <div class="empty"><div class="mini-room"><div class="mini-board"></div><i></i><i></i><i></i><i></i></div><h3>Your classroom, visualised.</h3><p>Complete the room details and generate your seating plan.</p><small>WAITING FOR CLASSROOM DATA</small></div>
+        </div>
+        <div class="preview-foot"><span>● Layout canvas</span><span>TOP-DOWN VIEW · NOT TO SCALE</span></div>
+      </section>
+    </section>
+    <footer>CLASSROOMOS · SEATING STUDIO <span>Powered by C, HTML, CSS & JavaScript</span></footer>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
